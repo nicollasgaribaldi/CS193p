@@ -8,7 +8,6 @@
 import SwiftUI
 
 class EmojiMemoryGame {
-    
     static let emojis = ["🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀", "⛵️", "🛸", "🛶", "🚌", "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
     
     static func createMemoryGame() -> MemoryGame<String> {
@@ -20,7 +19,7 @@ class EmojiMemoryGame {
     private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     var cards: Array<MemoryGame<String>.Card> {
-        return model.cards
+        model.cards
     }
 }
 // nem comment
