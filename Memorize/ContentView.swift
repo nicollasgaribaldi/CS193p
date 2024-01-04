@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         VStack {
@@ -17,6 +17,9 @@ struct ContentView: View {
                     ForEach(viewModel.cards) { card in
                         CardView(card: card)
                             .aspectRatio(2/3, contentMode: .fit)
+                            .onTapGesture {
+                                viewModel.choose(card)
+                            }
                     }
                 }
             }
@@ -36,6 +39,8 @@ struct CardView: View {
                 shape.fill().foregroundColor(.white)
                 shape.stroke(lineWidth: 3)
                 Text(card.content).font(.largeTitle)
+            } else if card.isMatched {
+                shape.opacity(0)
             } else {
                 shape.fill()
             }
