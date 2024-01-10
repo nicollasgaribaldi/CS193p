@@ -31,6 +31,7 @@ struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Identifiabl
                 }
             }
         }
+
     
     private func adaptiveGridItem (width: CGFloat) -> GridItem {
         var gridItem = GridItem(.adaptive(minimum: width))
