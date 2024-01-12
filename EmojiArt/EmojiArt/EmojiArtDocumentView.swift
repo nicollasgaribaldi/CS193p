@@ -29,6 +29,18 @@ struct EmojiArtDocumentView: View {
                         .position(position(for: emoji, in: geometry))
                 }
             }
+            .onDrop(of: [.plainText], isTargeted: nil) { providers, location in
+                return drop(providers: providers, at: location)
+            }
+        }
+    }
+    
+    private func drop(providers: [NSItemProvider], at location: CGPoint) -> Bool {
+        return providers.loadObjects(ofType: String.self) { String in
+            if let emoji = string.first, emoji.isEmoji {
+                
+            }
+            document.addEmoji(emoji, at: convertToEmojiCoordenates(location), size: defaultEmojiFontSize)
         }
     }
     
@@ -64,6 +76,7 @@ struct ScrollingEmojisView: View {
             HStack {
                 ForEach(emojis.map { String($0) }, id: \.self) { emoji in
                     Text(emoji)
+                        .onDrag { NSItemProvider(object: emoji as NSString) }
                 }
             }
         }
