@@ -46,6 +46,8 @@ struct EmojiArtDocumentView: View {
         }
     }
     
+    //MARK: - Drag and Drop
+    
     private func drop(providers: [NSItemProvider], at location: CGPoint, in geometry: GeometryProxy) -> Bool {
         var found = providers.loadObjects(ofType: URL.self) { url in
             document.setBackground(.url(url.imagemURL))

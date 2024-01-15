@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B15C63BD2B54E6DC00EDFB31 /* PaletteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C63BC2B54E6DC00EDFB31 /* PaletteStore.swift */; };
 		B1DB52202B50C36200B3B352 /* EmojiArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB521F2B50C36200B3B352 /* EmojiArtApp.swift */; };
 		B1DB52222B50C36200B3B352 /* EmojiArtDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB52212B50C36200B3B352 /* EmojiArtDocumentView.swift */; };
 		B1DB52242B50C36400B3B352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1DB52232B50C36400B3B352 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B15C63BC2B54E6DC00EDFB31 /* PaletteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteStore.swift; sourceTree = "<group>"; };
 		B1DB521C2B50C36200B3B352 /* EmojiArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DB521F2B50C36200B3B352 /* EmojiArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtApp.swift; sourceTree = "<group>"; };
 		B1DB52212B50C36200B3B352 /* EmojiArtDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentView.swift; sourceTree = "<group>"; };
@@ -62,11 +64,12 @@
 		B1DB521E2B50C36200B3B352 /* EmojiArt */ = {
 			isa = PBXGroup;
 			children = (
-				B1DB521F2B50C36200B3B352 /* EmojiArtApp.swift */,
 				B1DB52212B50C36200B3B352 /* EmojiArtDocumentView.swift */,
-				B1DB522E2B50C3F400B3B352 /* EmojiArtModel.swift */,
 				B1DB52322B50C90E00B3B352 /* EmojiArtDocument.swift */,
+				B15C63BC2B54E6DC00EDFB31 /* PaletteStore.swift */,
+				B1DB522E2B50C3F400B3B352 /* EmojiArtModel.swift */,
 				B1DB52302B50C6D800B3B352 /* EmojiArtModel.Background.swift */,
+				B1DB521F2B50C36200B3B352 /* EmojiArtApp.swift */,
 				B1DB52362B50CDE800B3B352 /* UtilityExtensions.swift */,
 				B1DB52382B50D09B00B3B352 /* UtilityViews.swift */,
 				B1DB52232B50C36400B3B352 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1DB52392B50D09B00B3B352 /* UtilityViews.swift in Sources */,
+				B15C63BD2B54E6DC00EDFB31 /* PaletteStore.swift in Sources */,
 				B1DB52222B50C36200B3B352 /* EmojiArtDocumentView.swift in Sources */,
 				B1DB52202B50C36200B3B352 /* EmojiArtApp.swift in Sources */,
 				B1DB52372B50CDE800B3B352 /* UtilityExtensions.swift in Sources */,
