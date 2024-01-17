@@ -58,6 +58,16 @@ extension String {
     }
 }
 
+extension String {
+    var removingDuplicateCharacters: String {
+        reduce(into: "") { sofar, element in
+            if !sofar.contains(element) {
+                sofar.append(element)
+            }
+        }
+    }
+}
+
 extension Character {
     var isEmoji: Bool {
         if let firstScalar = unicodeScalars.first, firstScalar.properties.isEmoji {
